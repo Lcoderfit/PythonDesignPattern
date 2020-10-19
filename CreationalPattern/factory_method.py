@@ -5,6 +5,17 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 
+"""
+工厂方法的好处：
+1.如果每个产品类中都有一些相同的操作，则可以减少代码
+2.客户端不必知道产品的类型，如果有多个new语句创建了产品1，现在要将产品1修改为产品2，则只需要修改工厂方法的返回类型即可
+
+应用场景：
+1.产品中有大量重复的操作
+2.需要在多个地方创建产品对象
+"""
+
+
 # 抽象基类，Creator即相当于一个接口
 class Creator(ABC):
     # 抽象方法，含有abstractmethod的类不能实例化，
